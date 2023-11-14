@@ -5,7 +5,7 @@ pipeline {
         timeout(time: 10, unit: 'MINUTES')
      }
     environment {
-   // DOCKERHUB_CREDENTIALS = credentials('kennynuga_docker')
+   // DOCKERHUB_CREDENTIALS = credentials('kennynuga')
     APP_NAME = "kennynuga/jully"
     }
     stages { 
