@@ -6,7 +6,7 @@ pipeline {
      }
     environment {
    // DOCKERHUB_CREDENTIALS = credentials('kennynuga')
-    APP_NAME = "kennynuga/jully:latest"
+    APP_NAME = "kennynuga/jully"
     }
     stages { 
         stage('SCM Checkout') {
