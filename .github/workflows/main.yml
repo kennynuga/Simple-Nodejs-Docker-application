@@ -24,17 +24,14 @@ jobs:
           username: ${{secrets.DOCKER_USERNAME}}
           password: ${{secrets.DOCKER_PASSWORD}} 
         
-      - name: build docker images
-        uses: docker/build-action@v4
+      - name: Build and push
+        uses: docker/build-push-action@v5
         with:
           push: true
           tags: user/app:latest
+
           
-      - name: push docker images
-        uses: docker/push-action@v5
-        with:
-          push: true
-          tags: user/app:latest
+     
           
         
 
