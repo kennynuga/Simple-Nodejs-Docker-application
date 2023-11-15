@@ -12,13 +12,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-
-
-
-
-jobs:
-  docker:
-    runs-on: ubuntu-latest
     steps:
       -
         name: Set up QEMU
