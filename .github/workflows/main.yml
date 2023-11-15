@@ -1,0 +1,29 @@
+name: Publish Docker image
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps: 
+      - name: checkout the repo
+        uses: actions/checkout@v3
+
+      -
+        uses: actions/checkout@v3
+      - name: login to Docker Hub
+        run:  docker login -u kennynuga -p dckr_pat_jssXnMCI_n5VZMi0aK-1C9RpFxQ
+        
+      - name: build docker images
+        run: docker build -t kennynuga/jully .
+
+   
+    
+    
