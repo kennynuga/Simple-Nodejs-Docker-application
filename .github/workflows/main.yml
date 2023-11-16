@@ -8,11 +8,13 @@ on:
 
 jobs:
   Build-and-Push:
-    runs-on: ubuntu-latest, windows-latest
-
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+
+    - name: Analyze code
+      uses: github/codeql-action/analyze@v1
           
     - name: Build the first Docker image
       run: docker build -t kennynuga/jully:latest .
