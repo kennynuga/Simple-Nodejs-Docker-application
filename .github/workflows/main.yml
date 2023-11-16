@@ -13,6 +13,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
+    - name: Set up Codeql
+      uses: github/codeql-action/init@v2
+    
     - name: Analyze code
       uses: github/codeql-action/analyze@v2
           
